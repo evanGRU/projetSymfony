@@ -25,7 +25,7 @@ class Movie
     private ?string $description = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $releaseData = null;
+    private ?\DateTimeInterface $releaseDate = null;
 
     #[ORM\Column]
     private ?int $duration = null;
@@ -70,14 +70,14 @@ class Movie
         return $this;
     }
 
-    public function getReleaseData(): ?\DateTimeInterface
+    public function getReleaseDate(): ?\DateTimeInterface
     {
-        return $this->releaseData;
+        return $this->releaseDate;
     }
 
-    public function setReleaseData(\DateTimeInterface $releaseData): static
+    public function setReleaseDate(\DateTimeInterface $releaseDate): static
     {
-        $this->releaseData = $releaseData;
+        $this->releaseDate = $releaseDate;
 
         return $this;
     }
