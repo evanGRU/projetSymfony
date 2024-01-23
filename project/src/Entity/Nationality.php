@@ -18,7 +18,7 @@ class Nationality
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $libellÃe = null;
+    private ?string $libelle = null;
 
     #[ORM\OneToMany(mappedBy: 'nationality', targetEntity: Actor::class)]
     private Collection $actors;
@@ -33,14 +33,14 @@ class Nationality
         return $this->id;
     }
 
-    public function getLibellÃe(): ?string
+    public function getLibelle(): ?string
     {
-        return $this->libellÃe;
+        return $this->libelle;
     }
 
-    public function setLibellÃe(string $libellÃe): static
+    public function setLibelle(string $libelle): static
     {
-        $this->libellÃe = $libellÃe;
+        $this->libelle = $libelle;
 
         return $this;
     }
